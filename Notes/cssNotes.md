@@ -227,6 +227,16 @@ Static positioning is the default position that each tag had, meaing it will be 
 
 Relative postioing is a form of postions that places the element relative to it's supposide postion, can be the default position or the position it is within a given container, this will allow you to move it from its default positoin unlike static position.
 
+Absolute Positoning relative to the nearest positioned ancestor or top left corner of webpage. if the element it is in, meaning if the tag is in a div or body anthing that is contaning the tag we assigned the absolute postion to, if none of the containers it has as it's ancestors do not have a position set for them it will travel as far back as it needs to, till it hits a tag that does have position assignment or it hits the HTML tag, and positions itself relative to it.
+```html
+
+<html>
+
+</html>
+
+
+```
+
 
 
 
