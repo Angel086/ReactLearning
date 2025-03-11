@@ -146,6 +146,94 @@ Division Element
 Divides contents as it's seen as an invisable box, this allows us to have a box with other smaller boxs grouping them.
 This way we can style them, making the boxs look better, the down side it is hard to identify bugs a bit more difficult.
 
+
+CassCase operatonal order of importance
+---------------------------------------------------------
+Postion: 
+    If a rule is in a higher or lower posotion, it will apply the last executed order, if there are 2 colors one bing red and the other blue and the blue is the last oder in the css code, that will be applied, when it runs it will execute the first color application then it applies the lastone.
+
+Specifity: 
+    The lest spacifice is the element selector, this applies to all the same elements thus making it least specific, next is  class selector this selects all the elements that have the class name, next is attribute selecting, they are similar to class but attributes over-rights class, making it top priority in compareson between the 2. Lastsly is id, since we will assigne it to only one element and should only have it fallow best practice, only having one id. Lastls, remenber the order they are in detwermians what is applied to the element, the last execution of code of modificaiton written up will be applied, if the tags have said definitions.
+
+Type: 
+    The method we have our definitions located. If we are using an external definition, where we have our css styling lister and linked to html, the code will look at the css, and apply them first, if our linked css is then fallowed by a style block of code (internal styling), it is then applied secodnly, changed the methods we had defined in the css to each tag element with defined attributes. Lastsly, if we have inline sytling, meaning, that the tag has style denignitions on it, then the machine will apply those, overwritting the last definitions given to it, applying them and ending the code. Remeber the order each definition is in, is what we will see last.
+order of importance of types:
+1 inline 2 internal 3 external
+
+Importance:
+    if in the css/styling is fallowed by an !important, it will take top priorty, if it does not then it will fallow the previous methods spoken of. 
+````css
+    h1{
+        color: red;
+        color: maroon !important;
+    }
+````
+
+
+C-C-C-C-C-Combo CSS
+--------------------------------------
+In css you can select to tags or class, which ever and have them be defined with the same properties as shown below 
+```css
+h1,h2{
+    color:maroon; 
+}
+
+```
+there is a child selector which is first the child fallowed by > and then the child. this will affect the child, it has to be the direct child meaning one level down to take affect;
+```html
+<html>
+<style>
+    body > h2 {
+        color: "sky blue";
+    }
+    .parent1 > h2{
+        color: maroon;
+    }
+</style>
+    <body class="partn1">
+        <h2>Here is the child</h2>
+    </body>
+    <body class="parent2">
+        <h2>Clone</h2>
+    </body>
+</html>
+
+```
+In the above example we show that in the first css style it would tartget both body tags, if we have a class definition or id applied to eitehr it is best to use that then just go off by the element; 
+
+
+There is another method to apply attributes, the descendant and ancestor method. This means the desendant will get the applied styling, as long as its contained within the ancesstor. This means that the ancestor has to contain the element within itself.
+```css
+slector selector{
+    color: blue;
+}
+```
+
+Chaining selector, is a method that targets all of the targets elements are true, this will apply the modifications written. This allows to make a specification modifications, if there is a missing condition it will not apply the modifications.
+```css
+.fCondtion#sCondition{
+
+}
+h1["blue"].sCondition#thirdCondition{
+
+}
+```
+No spaces in this method as well start off with the targeted element if that's what you want modified then fallowed by the class or id condition.
+
+
+Positioning Elements
+----------------------------------------------------------------
+Static positioning is the default position that each tag had, meaing it will be on the left most coner/side. Even if there is css in it moving it left by 20px 100px and right by and x amount of px it will not move it since it has static positioning property on.
+
+Relative postioing is a form of postions that places the element relative to it's supposide postion, can be the default position or the position it is within a given container, this will allow you to move it from its default positoin unlike static position.
+
+
+
+
+
+
 Self Note
 -----------------------------------
-Display with flex will center everything with in the tag elements scope,
+Display with flex will center everything with in the tag elements scope.
+
+
