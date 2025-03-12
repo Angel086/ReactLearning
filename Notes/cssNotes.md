@@ -223,11 +223,14 @@ No spaces in this method as well start off with the targeted element if that's w
 
 Positioning Elements
 ----------------------------------------------------------------
-Static positioning is the default position that each tag had, meaing it will be on the left most coner/side. Even if there is css in it moving it left by 20px 100px and right by and x amount of px it will not move it since it has static positioning property on.
+Static positioning 
+    default position that each tag had, meaing it will be on the left most coner/side. Even if there is css in it moving it left by 20px 100px and right by and x amount of px it will not move it since it has static positioning property on.
 
-Relative postioing is a form of postions that places the element relative to it's supposide postion, can be the default position or the position it is within a given container, this will allow you to move it from its default positoin unlike static position.
+Relative postioing
+     A form of postions that places the element relative to it's supposide postion, can be the default position or the position it is within a given container, this will allow you to move it from its default positoin unlike static position.
 
-Absolute Positoning relative to the nearest positioned ancestor or top left corner of webpage. if the element it is in, meaning if the tag is in a div or body anthing that is contaning the tag we assigned the absolute postion to, if none of the containers it has as it's ancestors do not have a position set for them it will travel as far back as it needs to, till it hits a tag that does have position assignment or it hits the HTML tag, and positions itself relative to it.
+Absolute Positoning 
+    relative to the nearest positioned ancestor or top left corner of webpage. if the element it is in, meaning if the tag is in a div or body anthing that is contaning the tag we assigned the absolute postion to, if none of the containers it has as it's ancestors do not have a position set for them it will travel as far back as it needs to, till it hits a tag that does have position assignment or it hits the HTML tag, and positions itself relative to it.
 ```html
 
 <html>
@@ -236,7 +239,12 @@ Absolute Positoning relative to the nearest positioned ancestor or top left corn
 
 
 ```
+x,y,z indexs: 
+    The Z index for every element has a value of 0, it can go either negative or positive depending on what you wish to have it displayed as. It can go behind or above other elements.
 
+Fixed Positioning: 
+    Relative to tthe top left conner of the browser window even if you scroll up and down it will stay on that conner. 
+    Absolut moves with the webpage, thus it will not be seen when scrolled down/up. 
 
 
 
@@ -246,4 +254,7 @@ Self Note
 -----------------------------------
 Display with flex will center everything with in the tag elements scope.
 
+When moving elements we are postioning them by the top left conner, regadless if it is a circle square or whatever otehr shape it maybe. It is always moved from the top left conner so if we go by 50px or 50% maring/top, it will be moved 50 of either from its original positon.
+
+The original position of each tag/element is tge top left coner. 
 
