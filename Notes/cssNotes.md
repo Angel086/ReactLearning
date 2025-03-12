@@ -247,7 +247,35 @@ Fixed Positioning:
     Absolut moves with the webpage, thus it will not be seen when scrolled down/up. 
 
 
+CSS Display
+------------------------------------
+Block:
+    A block is the default set of any tag in HTML/CSS, this is essentiall why they go all the way accross the page when ran and examined the element
+    There is a element called span, which is insereted in a paragraph tag. Span has a different value, default display which is inline.Other elements have the display set to block, it can be changed in css from block to inline or inline-block as well ofc block.
 
+Inline:
+     Both tags/elements appear on the same line, rather then by stacked on one and other, this also won't allow you to set the width/height, it will only allow to fit as much as is needed for the other element to appear next to it.
+Inline-Block:
+    Allows blocks to appear next to one and other as well to have their width and hight modified as long as there is enough space in the webpage,
+None:
+    Hids the elements, useful to hid buttons or other elements that are not meant to be on display till a user fulfills a requirement
+
+css Float
+-----------------------------------------
+It wrapps around an elements this then allows any other elements to appear next to one and other and wrapps around the element
+```html
+<html>
+    <style>
+        img{
+            float:right;/*Will appearr on the right side of the page
+            txt will wrap around the left*/
+        }
+    </style>
+<img src="insert.png"/>
+<p>some really long txt.....</p>
+</html>
+
+```
 
 
 Self Note
