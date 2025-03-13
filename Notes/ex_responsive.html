@@ -1,0 +1,27 @@
+<body>
+    <style>
+        body{
+            background-color:aqua ;
+        }
+        .gride-container{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: 100px 200px 200px;
+            gap: 30px; 
+        }
+        .first{
+            grid-column:span 2;
+            background:purple !important;
+        }
+        .card{
+            background-color:blue;
+        }
+    </style>
+    <div class="gride-container">
+        <div class="first card"></div>
+        <div class="card" style="background-color: red;"></div>
+        <div class="card" style="background-color:orange"></div>
+        <div class="card" style="background-color: aliceblue;"></div>
+        <div class="card"></div>
+    </div>
+</body>

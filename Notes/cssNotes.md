@@ -276,6 +276,70 @@ It wrapps around an elements this then allows any other elements to appear next 
 </html>
 
 ```
+To have images to be wrapped around the txtxs we can just do as shown above, to txt blocks can be wrapped around them.
+If we have a footer, the footer would also wrap around the img, instead of being at the bottom, to change this behavior, we have to us a relation property calledc clear, clear allows it to be seperated from the float property, this clears it from the float property, allowing it to go to its orignal postion, ignoring the floater.
+```html
+<html>
+<body>
+    <style>
+        img{
+            float:left
+            ;/*Will appearr on the right side of the page
+            txt will wrap around the left*/
+        }footer{
+            clear:left;
+        }
+    </style>
+    <img src="insert.png"/>
+    <p>some really long txt.....</p>
+    <footer>something inc</footer>
+</body>
+
+</html>
+
+```
+
+
+Responsive web
+-------------------------------------
+Media Queries:
+    conditional that is looked out for when the window is at or below a give width, this then applies the css in it's conditonal statment
+```css
+    @media (max-width: 600px){
+        /*CSS for a screens below or equal to 600px wide*/
+    }
+```
+CSS Grid:
+    This is a bit harder to understand though it is far more flexable, we have to create varius divs to set up a multi card layout with different layouts. Doing so we have to make a display grid, this is notifying the machjine to let it know we are making a grid with css, we have to tell it how we have the columns set up, the freactions, as well the grids-template-rows. fr is equal fraction that is give in the gride template columns. the rows has setup the sizes such as grid-template-rows: 100px 200px 200px; top row is 100px in height and the rest as seen as 200px, there is also the gap that is need it can be anthing. 
+```html
+<body>
+    <style>
+        .gride-container{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: 100px 200px 200px;
+            gap: 30px; 
+        }
+        .first{
+            grid-column:span 2;
+            background:purple;
+        }
+        .card{
+            back-ground-color:blue;
+        }
+    </style>
+    <div class="grid-container">
+        <div class="first card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+</body>
+
+
+```
+CSS Flexbox
 
 
 Self Note
@@ -285,4 +349,6 @@ Display with flex will center everything with in the tag elements scope.
 When moving elements we are postioning them by the top left conner, regadless if it is a circle square or whatever otehr shape it maybe. It is always moved from the top left conner so if we go by 50px or 50% maring/top, it will be moved 50 of either from its original positon.
 
 The original position of each tag/element is tge top left coner. 
+
+with floater, there is inline-start and -end, the first starts where the image is not located in it's float, which is if its on the right or left the inline will start at the opposite direction, while end will do that same
 
