@@ -376,15 +376,6 @@ As shown below a flex of 1 would making it the size and width that is given, sin
 
 BootStrap Framework:
 --------------------------------------------------------
-Recall it needs to be dowloaded, its a predefined library that has a majority of css to stylize your website, gotta look in their docs to know which definition is already made and how to modify it. To decleare the size of a card class in bootsttrap you can declear it by col-6 if you have a leangth of 12, this would take 1/2 of the section and then if you have 2 more cards, one of col-2 and col-4, this translates to 2/12 4/12 and so forth.
-
-
-How media is used and the conditionals
---------------------------
-When using @media there is max-width and min-width, for max- 
-
-
-
 
 
 Self Note
