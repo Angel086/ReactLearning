@@ -1,4 +1,4 @@
-Element Selector
+Element Selector 
 ----------------------------------------------------------------
 element selectors, target all tags that are being modified in css
 ```css
@@ -259,7 +259,21 @@ Inline-Block:
     Allows blocks to appear next to one and other as well to have their width and hight modified as long as there is enough space in the webpage,
 None:
     Hids the elements, useful to hid buttons or other elements that are not meant to be on display till a user fulfills a requirement
-
+```html
+<style>
+    #proj{
+        display: inline;
+    }
+    
+</style>
+<div id=proj>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+```
 css Float
 -----------------------------------------
 It wrapps around an elements this then allows any other elements to appear next to one and other and wrapps around the element
@@ -290,6 +304,7 @@ If we have a footer, the footer would also wrap around the img, instead of being
             clear:left;
         }
     </style>
+
     <img src="insert.png"/>
     <p>some really long txt.....</p>
     <footer>something inc</footer>
@@ -381,11 +396,100 @@ Recall it needs to be dowloaded, its a predefined library that has a majority of
 
 How media is used and the conditionals
 --------------------------
-When using @media there is max-width and min-width, for max- 
+When using @media there is max-width and min-width, for max- width it is checking the page to be at most less then 600px or smaller for it to apply the css styling to the page, min does the same but is checking that the page has 600px and up to apply the css, so anything that meets the minimue req. size.
+```html
+<style>
+    /*Targets anything the is 600px and up and anything that is less 900px it 
+    will apply the styling*/
+    @media (min-width: 600px) and (max-width: 900px){
+        /* css code*/
+    }
+    /*Anything that is less than 600px and anything greater then 900px
+    apply the css*/
+    @media (max-width: 600px) and (min-width: 900px){
+        /* css code*/
+    }
+</style>
+
+```
+there is also media screen the alternative is print, which targets when your website is being printed, it either targets screen or print.
 
 
 
+Flex Box
+--------------------------------------------------
+Using a table will create a coloum section, though it is stiff and will cause issues once other elemenets are added on, it can be managed but it is tricky to do, it is not best practice in modern day web development. The issue as well they appear at the bottom, to have them appear at the top, you need to use absolute to move them at the top, then position them, as well their width and such. Not really responsive.
 
+Flaots can also be used to organize the elements but requiers as well to set them up and becomes more complex.
+
+Flex is soemthing completly different, from inline and other methods of display. Flex displays the elements within a reasonable layout, it will put them out by the contant size, each secation will have it's orignal width and height ignored and display them by contact size.Gap is the distance each container has. There is also inline-flex, it will take up as much space it needs and leave the rest for the other elements to appear next to it.
+
+Flex Direction
+---------------------
+When using flex, it will usually lay thing vertically by default, this can be changed by flex-direction, by picking columns to display the miteral ontop of one and other, row shows them next to one and other and is the default.
+
+Flex-basis 
+--------------------
+Allows you to extend the width of aliments if they are in rows or height if they are in columns 
+
+Inline-flex: takes up as much space it flex allows it to, it won't expand unless the contant in it requires it
+
+Order
+-------------------------------
+the order of element can be changed by giving them a higher or lesser value on the oder propert on the tag that is assigned to the element, 
+```css
+.green{
+    order: 50;
+}
+
+```
+
+
+Flex-wrap
+------------------------
+flex-wrap by default has it set to nowrap, this causes elements to go over the width of the page or element. Setting it to wrap allows the elements to be stacked/go underneat one and other, disallowing elements to overflow.
+
+```html
+<body>
+    <style>
+        .container{
+            flex-wrap: wrap;
+            display: flex;
+        }
+        #main{
+            border: 3px solid black;
+        }
+        div{
+            background-color: black;
+            border : 2px solid red;
+        }
+    </style>
+    <div id="main" class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+```
+wrap revers starts at the bottom and does it backwords 
+check out : https://appbrewery.github.io/flex-layout/
+
+
+justify-content
+------------------------------------
+This is used on containers (main element containting dives and such) that will line up elements either at the right conner, center, left coner,  depending on what you set it to. You can also space out the iteams as well
+```css
+.container{
+    display: flex;
+    justify-content: flex-start; 
+    /*There is flex-end,center, 
+    space-between, will determin the amount of space for each
+    element ther is space-around, space-evenly  */
+}
+
+
+```
 
 Self Note
 -----------------------------------
