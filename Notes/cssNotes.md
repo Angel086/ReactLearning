@@ -491,6 +491,11 @@ This is used on containers (main element containting dives and such) that will l
 
 ```
 
+align-items
+---------------------------------
+
+aaa
+
 Self Note
 -----------------------------------
 Display with flex will center everything with in the tag elements scope.
