@@ -1,0 +1,100 @@
+html{
+    background-color: #3E3C73;
+    
+}
+body *{
+    color: #F2F0E4;
+}
+#sum{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+}
+#sum *{
+    padding: 0;
+    margin: 0;
+}
+.container{
+   display:flex;
+   justify-content: center;
+   gap: 5px;
+   background-color: #292840;
+   border: .75rem solid  #292840;
+}
+.social-container{
+    display:flex;
+    justify-content:center;
+    flex-direction: row;
+    width: 100%;
+    gap:5px;
+    border: 2px solid black;
+
+}
+.social{
+   border: 2px solid black;
+   margin:0;
+   padding:0;
+   text-align: center;
+
+}
+.Projects{
+    background-color: black;
+    border: 3px solid #4EBFD9;
+    height: 400px;
+    width: 100%;
+}
+.Exper{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    border: 2px solid blue;
+  
+    flex-direction: column;
+}
+.card{
+   background-color: aquamarine;
+    border: 3px solid #4EBFD9;
+   height:200px;
+}
+#socials p{
+    border: 3px solid black;
+    width: 50%;
+}
+#title{
+background-color:#292840 ;
+    border: 2px solid #4EBFD9 ;
+    float: left;
+    color: #8449BF;
+    width: 100%;
+    text-align: center;
+}
+#sum{
+    border: 2px solid black;
+    width: 100%;
+}
+
+@media (max-width: 1200px){
+   .container{
+    
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 1%;
+    
+   }
+   .social-container{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    border: 2px solid black;
+    }
+   .Projects{
+    height: 290px;
+   }
+   body  *{
+    font-size: 1.75rem;
+   }
+}
