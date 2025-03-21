@@ -438,6 +438,7 @@ flex-direction: row-reverse will set it the elements on the same line but revers
 ```
 ```html
     <div id=letter>
+        
         <p>A</p>
         <p>B</p>
         <p>C</p>
@@ -523,6 +524,21 @@ if you want another element to have a different alignment then what the containe
 Align-content only works when you have the flex-wrap to wrap, this allows you to adjust the content to be either centered start and so forth. 
 
 The difference between align content and align iteams is when is when windows size is smaller align content takes over, adjusting the iteams to what they ahwere designeted to be at. 
+
+
+flex-flow:
+----------------
+short hand for both flex direction and flex wrap, you can assigne it column, row, column-reverse and row-reverse and the second value is wrap or nowrap 
+
+Gap
+----------
+there is gap, column-gap and row-gap
+
+
+Flex-sizing
+------------------
+is a method to size, shrink and growing object within the container. 
+When diplay is initated to flex, it will automatically resize the elements with in it, this is done by a priority list, it looks at if there is a min/max-width, if not then it looks at the flex-basis, weither be it a column base or row base, it will fallow however it is set up. If there is no flex-basis it will then look at the width, wiether that be in rows or be it in columns, where it will look at height, it will do it's calculataions by that. if not found then it will look at it's content width, meaning the amount of space that content it has with in, it will then go down by its min size for each content.
 
 
 
