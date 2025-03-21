@@ -426,7 +426,24 @@ Flex is soemthing completly different, from inline and other methods of display.
 
 Flex Direction
 ---------------------
-When using flex, it will usually lay thing vertically by default, this can be changed by flex-direction, by picking columns to display the miteral ontop of one and other, row shows them next to one and other and is the default.
+When using flex, it will usually lay thing vertically by default, this can be changed by flex-direction, by picking columns to display the miteral ontop of one and other, row shows them next to one and other and is the defaulit.
+
+flex-direction: row-reverse will set it the elements on the same line but revers them, such as "a b c" its on the left side coner, using row-revers would make it appear as "c b a" on the right coner.
+
+```css
+#letter{
+    displat: flex;
+    flex-direction: row-reverse;
+}
+```
+```html
+    <div id=letter>
+        <p>A</p>
+        <p>B</p>
+        <p>C</p>
+    </div>
+```
+
 
 Flex-basis 
 --------------------
@@ -491,10 +508,23 @@ This is used on containers (main element containting dives and such) that will l
 
 ```
 
+
+
+
+
+
 align-items
 ---------------------------------
+This method moves it in the y axius
+This method allows us to position where iteams will be, either at the flex-start, flex-end(the bottom of the container "base"), center, you also have to set the height of the countainer by vh (viewport height), depending on the height of the contianer.
 
-aaa
+if you want another element to have a different alignment then what the container has, we would have to use align-self. This allows it to seperate from the groups alignment.
+
+Align-content only works when you have the flex-wrap to wrap, this allows you to adjust the content to be either centered start and so forth. 
+
+The difference between align content and align iteams is when is when windows size is smaller align content takes over, adjusting the iteams to what they ahwere designeted to be at. 
+
+
 
 Self Note
 -----------------------------------
