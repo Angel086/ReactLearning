@@ -540,6 +540,48 @@ Flex-sizing
 is a method to size, shrink and growing object within the container. 
 When diplay is initated to flex, it will automatically resize the elements with in it, this is done by a priority list, it looks at if there is a min/max-width, if not then it looks at the flex-basis, weither be it a column base or row base, it will fallow however it is set up. If there is no flex-basis it will then look at the width, wiether that be in rows or be it in columns, where it will look at height, it will do it's calculataions by that. if not found then it will look at it's content width, meaning the amount of space that content it has with in, it will then go down by its min size for each content.
 
+to change iteam sixe, you need a class or id to change their properties. the container will attempt to keep the properties intact till it reaches a limit that is not able to defaulting to min width.
+
+flex-basis over-writtes the width properties, since we have flex active. 
+
+When it is using min-width it goes by the longest word. If we have flex-basis and max-width, it will take the smaller of the 2, it will try to respect the flex-basis. If the container shrinks the items ofc shrink.
+
+When the min-width or flex-basis is larger, it will take the largest one over the smallest one.
+
+
+Grow & Shrink:
+------------------
+Elements in the flex container have access to flex-grow and flex-shrink this properties allow the elements to change in size, if they are set to 0, they will not grow or shrink with the container, if it is set to 1 it will allow it to grow or reduce it's size.
+If grow is set, then the items will grow, if shrink is on, it will shrink when the container is growing small, to it's max ability of the properties inside the item. 
+If both are one then it will try to grow as much as it can, and shrink as much as it can when the container becomes smaller.
+If neither are set then it wont change, though by default you will see them shrink and grow, till you chagne the behavior.
+
+
+the default for flex-basis is auto, it will give more width to the element with more contant then those with less, if you want it off then set flex-basis to 0
+
+Short Hand Flex
+-----------------------------
+there is a quick way to set up flex-(basis|| grow|| shrink) using flex: 0 1 2; the first is growth, fallowed by shrink and ebds with basis. 
+You can also use flex: 1; which state a growth of 1, shrink of 1 and a basis of 0, it doesn't need to be just one it can be any number you want.
+
+```html
+<html>
+    <style>
+        .container{
+            display: flex;
+            gap: 10px; 
+        }.red{
+            flex;1;   
+        }.blue{
+            flex:2;
+        }.green{
+            flex:3;
+        }
+    </style>
+</html>
+
+```
+this would set flex container, the red would be a growth of 1 and shrink of 1, the blue would be a growth of 2 and shrink of 2, and the green would be a growth of 3 and shrink of 3.  
 
 
 Self Note

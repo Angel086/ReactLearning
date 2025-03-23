@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        
+        font-family: "Josefin Sans", sans-serif;
+        background-color: black;
+      }
+      .pricing-container{
+        display: flex ;
+        flex-direction: row;
+        justify-content:space-evenly;
+        margin-top: 15%;
+        gap: 2%;
+      }
+      .pricing-plan{
+        border: 5px solid gray; 
+        width: 400px;
+        height: 300px;
+        border-radius: 10%;
+        color: white;
+        background-image: linear-gradient(to bottom, #082551, #005284, #0084b1, #00b8d3, #12ede9);
+      }
+      .plan-price{
+        display: flex;
+        font-size:30px;
+        justify-content: center;
+   
+      }
+      .plan-title{
+        margin-top: 8%;
+        display: flex;
+        font-size: 35px;
+        justify-content: center;
+      }
+      .plan-features{
+        display: flex;
+        font-size:17px;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 20%;
+        height: 90px;
+        gap: 10%;
+      }
+      .plan-button{
+        color: white;
+        display: flex;
+        font-size: medium;
+        margin-left: 40%;
+        border-radius: 15%;
+        background-color:#005284;
+      }
+      li{
+        list-style: none;
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          gap: 30px;
+          margin-top: 0;
+          
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
