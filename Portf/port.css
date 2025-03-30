@@ -1,50 +1,91 @@
-html{
-    background-color: #3E3C73;
-    
+body{
+    background-color:#8449BF;
+    height: 100vh;
 }
+
 body *{
-    color: #F2F0E4;
+   color: white;
 }
-#sum{
+
+.soc-icon{
+    width: 2rem;
+    height: 1.5rem;
+    padding: 0%;
+}
+.soc-butt{
     display: flex;
-    text-align: center;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+.projsen{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 15vh;
+    border: 3px solid white;
+}
+
+#mysum{
+    display: flex;
+    text-align: left;
     flex-direction: column;
     gap: 5px;
+    color: black;
 }
-#sum *{
+#mysum *{
     padding: 0;
     margin: 0;
 }
-.container{
+#name{
+    display: flex;
+    width: 75%;
+}
+.mycontainer{
    display:flex;
    justify-content: center;
    gap: 5px;
    background-color: #292840;
    border: .75rem solid  #292840;
+  
 }
-.social-container{
+.mysocial-container{
     display:flex;
-    justify-content:center;
     flex-direction: row;
-    width: 100%;
     gap:5px;
     border: 2px solid black;
-
 }
-.social{
-   border: 2px solid black;
-   margin:0;
-   padding:0;
-   text-align: center;
 
+.mysocial{
+    display:flex;
+    margin-right: 0;
+    border: 2px solid black;
+    padding:0;
+    text-align: center;
 }
-.Projects{
+/*.myProjects{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     background-color: black;
     border: 3px solid #4EBFD9;
     height: 400px;
     width: 100%;
+
+}*/
+.myProjects{
+    display: grid;
+    grid-column: 400px 400px 400px 400px;
+    grid-row: 200px 200px 200px 200px; 
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid sandybrown;
 }
-.Exper{
+.myExper{
     display: flex;
     gap: 10px;
     width: 100%;
@@ -52,30 +93,31 @@ body *{
   
     flex-direction: column;
 }
-.card{
+.mycard{
    background-color: aquamarine;
     border: 3px solid #4EBFD9;
    height:200px;
 }
-#socials p{
+#mysocials p{
     border: 3px solid black;
     width: 50%;
 }
-#title{
-background-color:#292840 ;
-    border: 2px solid #4EBFD9 ;
-    float: left;
+#mytitle{
+    display:flex;
+    margin: relative;
+    background-color:#292840 ;
+    border: 2px solid #4EBFD9 ; 
     color: #8449BF;
-    width: 100%;
-    text-align: center;
+    width: 75%;
+  
 }
-#sum{
+#mysum{
     border: 2px solid black;
     width: 100%;
 }
 
 @media (max-width: 1200px){
-   .container{
+   .mycontainer{
     
     flex-direction: column;
     justify-content: center;
@@ -83,7 +125,7 @@ background-color:#292840 ;
     border-radius: 1%;
     
    }
-   .social-container{
+   .mysocial-container{
     display:flex;
     justify-content:center;
     flex-direction: column;
@@ -91,7 +133,7 @@ background-color:#292840 ;
     gap: 5px;
     border: 2px solid black;
     }
-   .Projects{
+   .myProjects{
     height: 290px;
    }
    body  *{

@@ -584,6 +584,282 @@ You can also use flex: 1; which state a growth of 1, shrink of 1 and a basis of 
 this would set flex container, the red would be a growth of 1 and shrink of 1, the blue would be a growth of 2 and shrink of 2, and the green would be a growth of 3 and shrink of 3.  
 
 
+Grid
+---------------------
+Flex box is good for 1D layout while grid is good to section elemenets, using one and the other is not always the best, using a mixture of them is best since it can make more complex layouts more simple and easy to fallow. 
+the amount of columns and rows is made by the amount of xfr you use 
+
+```html
+
+<html>
+    <style> 
+
+        .container{
+            display:grid;
+            grid-template-columns: 1fr 2fr;/*fractional ratio of 1 to 2 meaning 2 columns */
+            grid-template-rows: 1fr 1fr;/*1 to 1 fractional */
+            gap: 10px;
+        }
+    </style>
+    <div class="container">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+</html>
+
+
+
+
+```
+
+
+Grid sizing
+-------------------------
+To make each row and column a wanted size, we can just give it as fallows, this will not make the grid reactive, meaning it won't change size or comprese with the window.
+
+Instead of using px we have use auto, it will expand and shring, though with the rows, it will not try to take 100% of the screen instead it trys to fit to the content, if it is 100px of the div it will try to be 100 pixels.
+
+
+
+
+```css 
+.container{
+    display:grid;
+    grid-template-rows: 100px 200px;
+    grid-template-columns: 400px 800px;
+    
+}
+```
+The example up top shows that the grid would be of length of 400px by a height of 100px on the first section and the next will be of 200px by 800px. Below is a short hand way to do it
+
+```css
+.container{
+    display:grid;
+    grid-template: 100px 200px/ 400px 800px
+    
+}
+
+```
+
+It is better to use fractional sizing (fr), since it is a bit more simpler to fallow.
+below is an example of fr, the first says the top row will be 1 : 2 the second says the columns will be 1 : 2 so essenital the frist row & colum is 1/2 
+
+This will allow it as well to be responsive to the windows sizing.
+```css 
+.container{
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+```
+There is also a minmax method to use to set up the widnows response and to what certain size we want it to be. Do not forget the comus, it will cause issues
+```css 
+.container{
+    display:grid;
+    grid-template-rows: 200px 400px;
+    grid-template-columns: 200px minmax(400px, 800px);
+}
+
+```
+when conducting reapeating values, we can use reapeat function that will make those columns and rows for us, the first value is that amount we want and the second is the size we wish for it so X is the amount desires Y is either the height or length we wish for
+
+```css 
+.container{
+    display:grid;
+    grid-template-rows:repeat(8, 100px);
+    grid-template-columns: repeat(8, 100px);
+}
+
+```
+if we define way more rows or columns then we elements in our html, then it will just populate the X amount of rows and columns with the E amount of elements that we do have, and leave the rest empty
+
+if we define with less amount then what we have in the css constainer, then it will add it but just squishing it in there it will make the X by Y grid but it will add the excess elements we have.
+
+There is a way to add more rows and columns by using grid-auto-rows and grid-auto-columns. It will add the elements to it with the heights and length given to it
+
+```css 
+.container{
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 3fr ;
+}
+
+```
+
+
+grid span
+-------------------
+We can tell iteams to span more then what they are assigned or defined, by using grid-row or column fallowed by span as shown below
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      height: 100vh;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .cowboy {
+      background-color: #00B9FF;
+      grid-column: span 2;
+    }
+
+    .astronaut {
+      background-color: #03989E;
+      order: 1;
+      grid-column: span 2;
+
+      /* TODO: Make the astronaut box look like the goal2 image. */
+
+    }
+    .book{
+      grid-row: span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item book">📖</div>
+  </div>
+</body>
+
+</html>
+
+```
+We can also move where the columns start, and expand by using grid-column-start/end as well their position in y-axis by grid-row-start/end, 
+So if we have a gird of size 4 by 4 and have an element div that is a grid-item we can tell it to start at column 1 and expands to 3, and strech to column 1 2 and 3
+```css 
+.grid-item{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+```
+here is a short hand version as well, its a bit confusing but essential we are telling it to start at x and end at y as fallows
+
+the values don't have to be positive they can be negative as well counting from the right to the left going by -1 to n*-1
+```css
+.grid-item{
+    grid-column: 1/3 ;
+    grid-row : 1/4;
+}
+
+```
+instead of using end and start to position the way we want our grid items to appear, we can use order to make it apear ahead or beihind the other elements, recall that all the elements start with a value of 0
+so anything higher then 0 will go to the end.
+
+there is also a short hand of grid start and end with columns and all and that is grid-area, the way it works is as fallow
+
+```css
+
+.grid-item{
+...
+....
+...
+/*the first is grid-row-start, the seodn is column-start, the third is row-end and the last is column-end*/
+grid-area: 2/ 1/ 3/ 3 ;
+}
+
+```
+the top is honestly hard to fallow
+
+bootStrap
+----------------
+there is the 12 row coloumns used as col to tell it how many coloumns to cover for an element is as fallows:
+col-size-n 
+(where n is the amount of coloumns to span from 1-12 n/12)
+if no n is given then it will default to the length of the allowed space
+
+rows are rows 
+
+Sizing of col item
+    sm : >= 576px
+    md : >= 768px
+    lg : >= 992px
+    xl : >= 1200px
+    xxl: >= 1400px
+
+background color utilities: 
+    bg-primary       // Blue
+    bg-secondary     // Gray
+    bg-success       // Green
+    bg-danger        // Red
+    bg-warning       // Yellow
+    bg-info          // Teal
+    bg-light         // Light gray (text may need dark)
+    bg-dark          // Dark gray (text may need light)
+    bg-white         // Pure white
+    bg-transparent   // Transparent background
+    bg-body          // Page background
+    bg-body-secondary
+    bg-body-tertiary
+
+Text color utilities:
+    text-primary
+    text-secondary
+    text-success
+    text-danger
+    text-warning
+    text-info
+    text-light
+    text-dark
+    text-white
+    text-muted         // Lighter gray text
+    text-body          // Default text color
+
+spacing utilites (margine and padding):
+    m-0    // margin: 0;
+    mt-1   // margin-top: 0.25rem;
+    mb-3   // margin-bottom: 1rem;
+    ms-2   // margin-start (left in LTR)
+    me-4   // margin-end (right in LTR)
+
+    p-2    // padding: 0.5rem;
+    ps-3   // padding-left (start)
+    pe-1   // padding-right (end)
+    pt-5   // padding-top
+    pb-0   // padding-bottom
+
+sizing
+
+
+
+
+
+
 Self Note
 -----------------------------------
 Display with flex will center everything with in the tag elements scope.
