@@ -20,12 +20,26 @@ body *{
     border-radius: 50%;
 
 }
-.projsen{
-    display: flex;
-    flex-direction: column;
+.project{
+    display: grid;
+    
+    border: 4px solid purple;
+    height: 70vh;
     width: 100%;
-    height: 15vh;
-    border: 3px solid white;
+    gap: 20px ;
+}
+ #pic{
+    border: 3px solid blue;
+    height: 40vh ;
+    padding: 5px;
+    width: 100% ;
+   
+}
+.projsen{
+    height:200px; 
+    width: 100%;
+    border: 2px solid white;
+   
 }
 
 #mysum{
@@ -43,14 +57,17 @@ body *{
     display: flex;
     width: 75%;
 }
+
 .mycontainer{
    display:flex;
    justify-content: center;
-   gap: 5px;
+   align-items: center;
+   gap: 10px;
    background-color: #292840;
    border: .75rem solid  #292840;
   
 }
+
 .mysocial-container{
     display:flex;
     flex-direction: row;
@@ -75,6 +92,7 @@ body *{
     width: 100%;
 
 }*/
+
 .myProjects{
     display: grid;
     grid-column: 400px 400px 400px 400px;
@@ -118,25 +136,36 @@ body *{
 
 @media (max-width: 1200px){
    .mycontainer{
-    
+    display: flex;
+    align-items: none;
+    justify-content: none;
     flex-direction: column;
-    justify-content: center;
     gap: 10px;
     border-radius: 1%;
     
    }
    .mysocial-container{
     display:flex;
-    justify-content:center;
+
     flex-direction: column;
     width: 100%;
     gap: 5px;
     border: 2px solid black;
     }
-   .myProjects{
-    height: 290px;
+   .project{
+    display: flex;
+    height: 300px;
    }
    body  *{
     font-size: 1.75rem;
    }
+    .projsen{
+       width: 100%;
+    }
+    #pic{
+        float:left;
+        width: 50%;
+        height: 30vh;
+        border: 2px solid blue;
+    }
 }
