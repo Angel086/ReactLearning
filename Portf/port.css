@@ -145,8 +145,7 @@ h1, h2{
     }
     #pic {
         width: 100%;
-        max-width: 20rem;
-        min-width: 15rem;
+        max-width: 15rem;
         height: 12.5rem;
         grid-column: 1;
         float: left;
@@ -155,6 +154,7 @@ h1, h2{
     
       .projsen {
         display: flex;
+        text-align: left;
         flex-wrap: wrap;
         height: 12.5rem;
         margin: 0;
