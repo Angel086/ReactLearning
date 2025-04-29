@@ -144,13 +144,10 @@ h1, h2{
         padding: 1rem;
     }
     #pic {
-        width: 100%;
-        max-width: 20rem;
-        min-width: 15rem;
+        width: 50%;
         height: 12.5rem;
         grid-column: 1;
         float: left;
-        overflow: auto;
       }
     
       .projsen {
