@@ -2,9 +2,13 @@ body{
     background-color:#1e1e2f;
     height: 100vh;
 }
+section {
+    margin-bottom: 2rem;
+  }
 
 body *{
    color:#f0f0f0;
+   font-family: 'Arial', sans-serif;
 }
 
 .soc-icon{
@@ -12,23 +16,26 @@ body *{
     height: 1.5rem;
     padding: 0%;
 }
+#botTxt{
+    display: flex;
+    font-size: x-small;
+    height: .25rem;
+}
 .soc-butt{
     display: flex;
-    border: 2px solid black;
+    
     justify-content: center;
     align-items: center;
     border-radius: 50%;
 
 }
 .project{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto, auto);
     background-color: #292840;
-    border: 2px solid #4EBFD9;
-    height: 30rem;
     width: 100%;
-    gap: 15px ;
+    gap: 1rem ;
     padding: 1rem;
     text-align: start;
     transition: box-shadow 0.3s ease, tranform 0.3s ease;
@@ -41,35 +48,37 @@ body *{
     text-align: left;
     font-size: 0.90rem;
     line-height: 1.4rem;
-  }
+}
 
 
  #pic{
     float: left;
-    border: 3px solid slateblue;
     padding: 5px;
     width: 100% ;
     height: 12rem;
     border-radius: 8px;
+    object-fit:fill;
    
 }
 
 .projsen{
     width: 100%;
     border-radius: 5px;
-    border: 2px solid rgb(52, 114, 146);
     overflow: auto;
     text-align:start;
     height: 14rem;
     padding: 1.5px;
 }
-
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
 #mysum{
-    display: flex;
-    text-align: left;
-    flex-direction: column;
-    gap: 5px;
-    color: black;
+    display: grid;
+    grid-template-columns: repeat(auto, auto);
+    grid-template-rows: repeat(auto,auto);
+    gap: 2fr;
 }
 #mysum *{
     padding: 0;
@@ -86,6 +95,16 @@ body *{
    align-items: center;
    gap: 1rem;
 }
+.Tech{
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    display: flex;
+    height: auto ;
+    max-height: 7rem;
+    min-height: 5rem;
+    text-align: left;
+    
+}
 .myExper{
     display: flex;
     gap: 10px;
@@ -94,8 +113,13 @@ body *{
 }
 .mycard{
    background-color: #3933b3;
-    border: 3px solid #4EBFD9;
-   height:200px;
+   border-radius: 11px;
+   text-align: left;
+   padding: 1rem;
+}
+#xpSen{
+    font-size: medium;
+    
 }
 #mysocials p{
     border: 3px solid black;
@@ -105,13 +129,12 @@ body *{
     display:flex;
     margin: relative;
     background-color:#292840 ;
-    border: 2px solid #4EBFD9 ; 
+    
     color: #8449BF;
     width: 75%;
   
 }
 #mysum{
-    border: 2px solid black;
     width: 100%;
 }
 #navtxt{
@@ -120,32 +143,50 @@ body *{
     font-weight: small;
     margin-left: 8px;
 }
+#subTxt{
+    font-weight: lighter;
+    font-size:medium;
+}
+h3{
+    font-style: italic;
+    font-weight: bold;
+}
 h1, h2{
     color: #A970FF;
  }
-
-@media (max-width: 970px){
+.skills{
+    display: grid;
+    grid-template-columns: repeat(auto, auto);
+    grid-template-rows: repeat(auto,auto);
+    gap:1fr;
+}
+@media (max-width: 990px){
     .mycontainer{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(auto,auto); 
+        grid-template-rows: repeat(auto, auto);
     }
     .mysocial-container{
         display:flex;
         flex-direction: column;
         width: 100%;
         gap: 5px;
-        border: 2px solid black;
+        
     }
     .project{
-        display:flex;
-        flex-direction: row;
-        height: 15rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
         gap: 1rem;
+        height: auto;
+        max-height: auto;
+        min-height: auto;
         padding: 1rem;
     }
     #pic {
         width: 100%;
         max-width: 15rem;
+        min-width: 13rem;
         height: 12.5rem;
         grid-column: 1;
         float: left;
@@ -156,9 +197,20 @@ h1, h2{
         display: flex;
         text-align: left;
         flex-wrap: wrap;
+        grid-column: 2;
         height: 12.5rem;
         margin: 0;
         padding: 0;
         overflow: auto;
+        font-weight: bold;
       }
+      .Tech{
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        max-height: auto;
+        min-height: auto;
+        text-align: left;
+      }
+      
 }
