@@ -1,216 +1,278 @@
-body{
-    background-color:#1e1e2f;
-    height: 100vh;
+body {
+  background-color: #1e1e2f;
+  height: 100vh;
 }
 section {
-    margin-bottom: 2rem;
-  }
-
-body *{
-   color:#f0f0f0;
-   font-family: 'Arial', sans-serif;
+  margin-bottom: 2rem;
 }
 
-.soc-icon{
-    width: 2rem;
-    height: 1.5rem;
-    padding: 0%;
+body * {
+  color: #f0f0f0;
+  font-family: "Arial", sans-serif;
 }
-#botTxt{
-    display: flex;
-    font-size: x-small;
-    height: .25rem;
-}
-.soc-butt{
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
 
+.soc-icon {
+  width: 2rem;
+  height: 1.5rem;
+  padding: 0%;
 }
-.project{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(auto, auto);
-    background-color: #292840;
-    width: 100%;
-    gap: 1rem ;
-    padding: 1rem;
-    text-align: start;
-    transition: box-shadow 0.3s ease, tranform 0.3s ease;
+#botTxt {
+  display: flex;
+  font-size: x-small;
+  height: 0.25rem;
 }
-.project:hover{
-    box-shadow: 0 0 15px 5px #4EBFD9;
-    transform: translateY(-5px);
+.soc-butt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.project {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(auto, auto);
+  background-color: #292840;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: start;
+  transition: box-shadow 0.3s ease, tranform 0.3s ease;
+}
+.project:hover {
+  box-shadow: 0 0 15px 5px #4ebfd9;
+  transform: translateY(-5px);
 }
 .project p {
-    text-align: left;
-    font-size: 0.90rem;
-    line-height: 1.4rem;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
 }
 
-
- #pic{
-    float: left;
-    padding: 5px;
-    width: 100% ;
-    height: 12rem;
-    border-radius: 8px;
-    object-fit:fill;
-   
+#pic {
+  padding: 5px;
+  width: 100%;
+  height: 12rem;
+  border-radius: 8px;
+  object-fit: contain;
+  object-position: center;
 }
 
-.projsen{
-    width: 100%;
-    border-radius: 5px;
-    overflow: auto;
-    text-align:start;
-    height: 14rem;
-    padding: 1.5px;
+.projsen {
+  width: 100%;
+  border-radius: 5px;
+  overflow: auto;
+  text-align: start;
+  padding: 1.5px;
 }
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-#mysum{
-    display: grid;
-    grid-template-columns: repeat(auto, auto);
-    grid-template-rows: repeat(auto,auto);
-    gap: 2fr;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
-#mysum *{
-    padding: 0;
-    margin: 0;
+#mysum {
+  display: grid;
+  grid-template-columns: repeat(auto, auto);
+  grid-template-rows: repeat(auto, auto);
+  gap: 2fr;
 }
-#name{
-    display: flex;
-    width: 75%;
+#mysum * {
+  padding: 0;
+  margin: 0;
+}
+#name {
+  display: flex;
+  width: 75%;
 }
 
-.mycontainer{
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   gap: 1rem;
+.mycontainer {
+  display: grid;
+  grid-template-columns: repeat(auto, auto);
+  grid-template-rows: repeat(auto, auto);
+  gap: 1rem;
 }
-.Tech{
-    font-family: Arial, Helvetica, sans-serif;
-    width: fit-content;
-    display: flex;
-    height: auto ;
-    max-height: 7rem;
-    min-height: 5rem;
-    text-align: left;
-    
+.p1,
+.p2 {
+  grid-row: 1;
 }
-.myExper{
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    flex-direction: column;
+.Tech {
+  font-family: Arial, Helvetica, sans-serif;
+  width: fit-content;
+  display: flex;
+  text-align: left;
 }
-.mycard{
-   background-color: #3933b3;
-   border-radius: 11px;
-   text-align: left;
-   padding: 1rem;
+.myExper {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto, auto);
+  grid-template-rows: repeat(auto, auto);
 }
-#xpSen{
-    font-size: medium;
-    
+.ExperienceSec {
+  grid-row: 1;
 }
-#mysocials p{
-    border: 3px solid black;
-    width: 50%;
+.xp1 {
+  grid-column: 1;
 }
-#mytitle{
-    display:flex;
-    margin: relative;
-    background-color:#292840 ;
-    
-    color: #8449BF;
-    width: 75%;
-  
+.xp2 {
+  grid-column: 2;
 }
-#mysum{
-    width: 100%;
+.xp3 {
+  grid-column: 3;
 }
-#navtxt{
-    display: flex;
-    color:black;
-    font-weight: small;
-    margin-left: 8px;
+.mycard {
+  background-color: #3933b3;
+  border-radius: 11px;
+  text-align: left;
+  padding: 1rem;
 }
-#subTxt{
-    font-weight: lighter;
-    font-size:medium;
+#xpSen {
+  font-size: medium;
 }
-h3{
-    font-style: italic;
-    font-weight: bold;
+#mysocials p {
+  border: 3px solid black;
+  width: 50%;
 }
-h1, h2{
-    color: #A970FF;
- }
-.skills{
+#mytitle {
+  display: flex;
+  margin: relative;
+  background-color: #292840;
+
+  color: #8449bf;
+  width: 75%;
+}
+#mysum {
+  width: 100%;
+}
+#navtxt {
+  display: flex;
+  color: black;
+  font-weight: small;
+  margin-left: 8px;
+}
+#subTxt {
+  font-weight: lighter;
+  font-size: medium;
+}
+h3 {
+  font-style: italic;
+  font-weight: bold;
+}
+h1,
+h2 {
+  color: #a970ff;
+}
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto, auto);
+  grid-template-rows: repeat(auto, auto);
+  gap: 1fr;
+}
+@media (max-width: 890px) {
+  .mycontainer {
     display: grid;
     grid-template-columns: repeat(auto, auto);
-    grid-template-rows: repeat(auto,auto);
-    gap:1fr;
+    grid-template-rows: repeat(auto, auto);
+  }
+
+  .mysocial-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .p1,
+  .p2,
+  .p3,
+  .p4 {
+    grid-row: auto;
+  }
+  #pic {
+    width: 100%;
+    max-width: 15rem;
+    min-width: 13rem;
+    grid-column: 1;
+    float: left;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .xp1 {
+    grid-row: 2;
+    grid-column: auto;
+  }
+  .xp2 {
+    grid-row: 3;
+    grid-column: auto;
+  }
+  .xp3 {
+    grid-row: 4;
+    grid-column: auto;
+  }
+
+  .projsen {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    grid-column: 2;
+    height: 12.5rem;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-weight: bolder;
+  }
+  .Tech {
+    grid-column: 2;
+    grid-row: 1;
+    max-height: auto;
+    min-height: auto;
+    text-align: left;
+  }
 }
-@media (max-width: 990px){
-    .mycontainer{
-        display: grid;
-        grid-template-columns: repeat(auto,auto); 
-        grid-template-rows: repeat(auto, auto);
-    }
-    .mysocial-container{
-        display:flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 5px;
-        
-    }
-    .project{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-        gap: 1rem;
-        height: auto;
-        max-height: auto;
-        min-height: auto;
-        padding: 1rem;
-    }
-    #pic {
-        width: 100%;
-        max-width: 15rem;
-        min-width: 13rem;
-        height: 12.5rem;
-        grid-column: 1;
-        float: left;
-        overflow: auto;
-      }
-    
-      .projsen {
-        display: flex;
-        text-align: left;
-        flex-wrap: wrap;
-        grid-column: 2;
-        height: 12.5rem;
-        margin: 0;
-        padding: 0;
-        overflow: auto;
-        font-weight: bold;
-      }
-      .Tech{
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        max-height: auto;
-        min-height: auto;
-        text-align: left;
-      }
-      
+@media (min-width: 1500px) {
+  .mycontainer {
+    display: grid;
+    grid-template-columns: repeat(auto, auto);
+    grid-template-rows: repeat(auto, auto);
+  }
+  .project {
+    height: 20rem;
+  }
+  .projsen {
+    grid-column: 2;
+    font-weight: 900;
+    font-size: x-large;
+  }
+
+  .p1,
+  .p2 {
+    grid-row: 1;
+  }
+  .p2,
+  .p4 {
+    grid-column: 2;
+  }
+  .p3,
+  .p4 {
+    grid-row: 2;
+  }
+  #pic {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+  .Tech {
+    grid-row: 1;
+    grid-column: 2;
+    height: 2rem;
+  }
+  .projTitle {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
