@@ -1,0 +1,54 @@
+.display {
+  height: 100vh;
+  background-image: linear-gradient(rgb(10, 75, 240), rgb(0, 174, 255) 90%);
+  margin: 0;
+  display: block;
+  
+  
+}
+.nav-header {
+  display: flex;
+  flex-wrap: column;
+  padding-top: 4px;
+  padding-left: 2px ;
+  height: 3rem;
+  justify-content: left;
+  color: black;
+  background-color: plum;
+}
+.items {
+  margin-left: 0;
+  padding: 0px;
+  width: 10rem;
+  font-size: 1.75rem;
+}
+.caracel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 10rem;
+    background-color: beige;
+}
+.container {
+  display: grid;
+  height: 30rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  margin-top: 5px;
+  padding: 6px;
+  gap: 4px;
+  
+  border: 4px, solid, black;
+  background-color: aliceblue;
+  overflow: scroll;
+  
+}
+.card {
+  background-color: paleturquoise;
+  border: 3px solid black;
+  border-radius: 3rem;
+  grid-row: auto;
+  grid-column: auto;
+  width: 100%;
+  height: 30rem;
+}
